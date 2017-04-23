@@ -1,0 +1,57 @@
+ <div class="well" style="background-color:white"><strong><p class="text-center">Ongoing matches</p></strong></div>
+
+
+    <div class="container" ng-repeat="teams in match.games" >
+    <div class="well well-sm" style="background-color: white" ng-show="teams.match==='ongoing'">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview"  style="" ng-show="teams.match==='ongoing'" >
+                     
+
+                    
+                        <h2 class="post-title" class="text-center">
+                           <strong><p class="text-center"> {{teams.team1}} vs {{teams.team2}}</p></strong>
+                        </h2>
+                        <div class="well well-sm" style="background-color: white">
+                        <h3 class="post-subtitle">
+                            score by {{teams.team1}} is{{teams.score1}}</br> score by{{teams.team2}} is {{teams.score2}}
+                        </h3></div>
+                        <div class="well well-sm" style="background-color: white">
+                    
+                    <p class="post-meta" style="" style="background-color: black">goals scored by these players in {{teams.team1}}-<span ng-repeat="players in teams.goals1">{{players}}</span></br> goals scored bythese players in {{teams.team2}}-<span ng-repeat="player in teams.goals2">{{player}}</span></br> 
+
+                    goals scored at<span ng-repeat="times in teams.time1"> {{times}}</span> by  {{teams.team1}}</br>goals scored at <span ng-repeat="time in teams.time2"> {{time}}</span> by {{teams.team2}}</br></p></div><button class="btn btn-primary btn-block" data-toggle="modal" data-target="#details">Match details</button>
+                </div></div></div></div></div>
+                <hr>
+                 <div class = "modal fade" id = "details" tabindex = "-1" role = "dialog" 
+   aria-labelledby = "myModalLabel" aria-hidden = "true">
+   
+   <div class = "modal-dialog">
+      <div class = "modal-content">
+         
+         <div class = "modal-header">
+            <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true">
+                  &times;
+            </button>
+            
+            <h4 class = "modal-title" id = "myModalLabel">
+               Match details
+            </h4>
+         </div>
+         
+         <div class = "modal-body">
+            Match is going on follow us for more updates <a href="https://www.facebook.com/sportzify/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+         </div>
+         
+         <div class = "modal-footer">
+            <button type = "button" class = "btn btn-default" data-dismiss = "modal">
+               Close
+            </button>
+            
+           
+         </div>
+         
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+  
+</div><!-- /.modal -->

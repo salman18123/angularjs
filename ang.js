@@ -1,0 +1,343 @@
+var myapp=angular.module("matchapp",['ngRoute']);
+myapp.controller("matches",function(){
+	this.heading="Football matches";
+	this.subheading="In Bangalore";
+	this.games=[
+{
+	"team1":"delhi",
+	"team2":"kolkota",
+	"score1":2,
+	"score2":1,
+	"goals1":["ashvin ","karthik"],
+	"goals2":["kranthi"],
+	"time1":["6.30 ","7.00"],
+	"time2":["7.05"],
+	"match":"completed"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"pune",
+	"score1":1,
+	"score2":1,
+	"goals1":["ravi"],
+	"goals2":["mohan"],
+	"time1":["6.32 "],
+	"time2":["7.05"],
+	"match":"completed"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"pune",
+	"score1":1,
+	"score2":1,
+	"goals1":["ravi "],
+	"goals2":["mohan"],
+	"time1":["6.32"],
+	"time2":["7.05"],
+	"match":"completed"
+},
+{ 
+	"team1":"chennai",
+	"team2":"hyderabad",
+	"score1":2,
+	"score2":1,
+	"goals1":["ravi ","karthikey"],
+	"goals2":["mohana"],
+	"time1":["6.34"],
+	"time2":["7.04"],
+	"match":"completed"
+},
+{ 
+	"team1":"hyderabad",
+	"team2":"goa",
+	"score1":2,
+	"score2":1,
+	"goals1":["raviena ","raheem"],
+	"goals2":["mohan"],
+	"time1":["4.32"],
+	"time2":["3.05"],
+	"match":"completed"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"hyderabad",
+	"score1":0,
+	"score2":1,
+	"goals1":[""],
+	"goals2":["mohan "],
+	"time1":[""],
+	"time2":["7.05"],
+	"match":"completed"
+},
+{ 
+	"team1":"delhi",
+	"team2":"pune",
+	"score1":1,
+	"score2":2,
+	"goals1":["ravi"],
+	"goals2":["mohan ","salman"],
+	"time1":["6.32"],
+	"time2":["7.05  ","7.10"],
+	"match":"completed"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"rajastan",
+	"score1":3,
+	"score2":1,
+	"goals1":["teja ","salman ","karthik"],
+	"goals2":["pavan"],
+	"time1":["6.42 ","7.00 ","8.00"],
+	"time2":["7.50"],
+	"match":"completed"
+},
+{ 
+	"team1":"mumbai",
+	"team2":"pune",
+	"score1":1,
+	"score2":1,
+	"goals1":["raviena"],
+	"goals2":["mohana"],
+	"time1":["6.33"],
+	"time2":["7.00"],
+	"match":"completed"
+},
+{ 
+	"team1":"mumbai",
+	"team2":"delhi",
+	"score1":1,
+	"score2":1,
+	"goals1":["ravi"],
+	"goals2":["mohan"],
+	"time1":["6.32"],
+	"time2":["7.05"],
+	"match":"completed"
+},
+{ 
+	"team1":"hyderabad",
+	"team2":"bangalore",
+	"score1":1,
+	"score2":1,
+	"goals1":["ravi"],
+	"goals2":["mohan"],
+	"time1":["6.32"],
+	"time2":["7.05"],
+	"match":"ongoing"
+},{ 
+	"team1":"delhi",
+	"team2":"pune",
+	"score1":1,
+	"score2":0,
+	"goals1":["ravi"],
+	"goals2":[""],
+	"time1":["6.52"],
+	"time2":[""],
+	"match":"ongoing"
+},
+{ 
+	"team1":"goa",
+	"team2":"delhi",
+	"score1":2,
+	"score2":1,
+	"goals1":["shastri ","salman"],
+	"goals2":["mohan"],
+	"time1":["6.42 ","7.42"],
+	"time2":["7.05"],
+	"match":"ongoing"
+},
+{ 
+	"team1":"varanasi",
+	"team2":"pune",
+	"score1":1,
+	"score2":1,
+	"goals1":["ravi"],
+	"goals2":["mohan"],
+	"time1":["4.32"],
+	"time2":["3.05"],
+	"match":"ongoing"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"pune",
+	"score1":1,
+	"score2":1,
+	"goals1":["ravi"],
+	"goals2":["mohan"],
+	"time1":["2.32"],
+	"time2":["4.05"],
+	"match":"ongoing"
+},
+{ 
+	"team1":"hyderabad",
+	"team2":"goa",
+	"score1":1,
+	"score2":0,
+	"goals1":["ravi"],
+	"goals2":["mohan"],
+	"time1":["6.32"],
+	"time2":[""],
+	"match":"ongoing"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"delhi",
+	"score1":1,
+	"score2":1,
+	"goals1":["boopal"],
+	"goals2":["rohan"],
+	"time1":["6.42"],
+	"time2":["7.05"],
+	"match":"ongoing"
+},
+{ 
+	"team1":"chennai",
+	"team2":"goa",
+	"score1":1,
+	"score2":0,
+	"goals1":["gopal"],
+	"goals2":[""],
+	"time1":["6.34"],
+	"time2":[""],
+	"match":"ongoing"
+},
+{ 
+	"team1":"delhi",
+	"team2":"chennai",
+	"score1":1,
+	"score2":1,
+	"goals1":["ravi"],
+	"goals2":["mohan"],
+	"time1":["6.32"],
+	"time2":["7.05"],
+	"match":"ongoing"
+},
+{
+
+
+"team1":"hyderabad",
+	"team2":"bangalore",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},{ 
+	"team1":"delhi",
+	"team2":"pune",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"goa",
+	"team2":"delhi",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"varanasi",
+	"team2":"pune",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"pune",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"pune",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"pune",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"chennai",
+	"team2":"hyderabad",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"hyderabad",
+	"team2":"goa",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"bangalore",
+	"team2":"hyderabad",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+},
+{ 
+	"team1":"delhi",
+	"team2":"pune",
+	"score1":0,
+	"score2":0,
+	"goals1":[""],
+	"goals2":[""],
+	"time1":[""],
+	"time2":[""],
+	"match":"new"
+}
+
+
+
+
+
+]
+console.log(this.games);
+})
